@@ -15,12 +15,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/code-royale">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/cpp" element={<CPlusPlusCourse />} />
           <Route path="/cpp/tema/:slug" element={<TopicDetail />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
