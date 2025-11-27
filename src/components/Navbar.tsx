@@ -11,21 +11,33 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Code2 className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-gradient">CodeMaster</span>
+            <span className="text-xl font-bold text-gradient">CodeRoyale</span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#modules" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#modules"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Módulos
             </a>
-            <a href="#success-stories" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#success-stories"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Casos de Éxito
             </a>
-            <a href="#resources" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#resources"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Recursos
             </a>
-            <a href="#tutoring" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#tutoring"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Tutorías
             </a>
           </div>
@@ -40,27 +52,45 @@ const Navbar = () => {
             className="md:hidden text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden pt-4 pb-2 flex flex-col gap-4 animate-fade-in">
-            <a href="#modules" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#modules"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Módulos
             </a>
-            <a href="#success-stories" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#success-stories"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Casos de Éxito
             </a>
-            <a href="#resources" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#resources"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Recursos
             </a>
-            <a href="#tutoring" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#tutoring"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Tutorías
             </a>
             <div className="flex flex-col gap-2 pt-2">
-              <Button variant="ghost" className="w-full">Iniciar Sesión</Button>
+              <Button variant="ghost" className="w-full">
+                Iniciar Sesión
+              </Button>
               <Button className="w-full glow-primary">Comenzar Gratis</Button>
             </div>
           </div>
